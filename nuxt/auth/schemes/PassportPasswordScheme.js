@@ -30,6 +30,7 @@ export default class PassportPasswordScheme {
   }
 
   async login(args) {
+    console.log('meh');
     if (!this.options.endpoints.login) {
       return;
     }
@@ -48,10 +49,12 @@ export default class PassportPasswordScheme {
       }
     };
 
+    console.log('meh2');
     const result = await this.$auth.request(
       request_args,
       this.options.endpoints.login
     );
+    console.log('meh3');
 
     if (this.options.tokenRequired) {
       const token = this.options.tokenType
@@ -91,7 +94,7 @@ export default class PassportPasswordScheme {
     if (this.options.endpoints.logout) {
       await this.$auth
         .requestWith(this.name, endpoint, this.options.endpoints.logout)
-        .catch(() => {});
+        .catch(() => { });
     }
 
     // But logout locally regardless

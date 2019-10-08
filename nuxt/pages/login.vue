@@ -6,12 +6,12 @@
           <label for="username">Username</label>
           <input name="username" v-model="user.username" />
         </div>
-        
+
         <div>
           <label for="password">Password</label>
           <input type="password" name="password" v-model="user.password" />
         </div>
-        
+
         <div>
           <button type="submit" @click.prevent="passwordGrantLogin">Login with Password Grant</button>
         </div>
@@ -24,6 +24,10 @@
     </div>
     <hr />
     <div><button @click="oauthLogin">Login with OAuth</button></div>
+
+    <br/><br/>
+    <button style="background-color:#faa; font-size:30px;" @click="guestUserGetTags">Guest - Get Tags (wont work)</button>
+
   </section>
 </template>
 
@@ -60,6 +64,11 @@ export default {
     },
     oauthLogin() {
       this.$auth.loginWith("laravel.passport");
+    },
+    guestUserGetTags() {
+      console.log('guestUserGetTags');
+      let tagsApiResponse = this.$axios.get('/api/v1/tags');
+      console.log('tagsApiResponse', tagsApiResponse);
     }
   }
 };

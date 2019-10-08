@@ -26,6 +26,6 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        Passport::routes(null, ['middleware' => [ \Barryvdh\Cors\HandleCors::class ]]);
+        Passport::routes(null, ['middleware' => [\Barryvdh\Cors\HandleCors::class]]);
     }
 }

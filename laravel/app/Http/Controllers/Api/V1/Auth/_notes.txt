@@ -1,0 +1,8 @@
+This is the code for social auth based on:
+
+Repo: https://gitlab.com/connecteev/laravel_nuxt_social_auth
+
+Working email + JWT + social auth (login and register), based on: https://github.com/connecteev/laravel-nuxt-authentication,
+which is forked and modified from https://github.com/fritsvt/laravel-nuxt-authentication
+Youtube playlist: https://www.youtube.com/watch?v=TFNBTjmkW0o&list=PLeZmuYT0mSPPeyIMa6oURCgpCMEd_sD_n&index=1
+

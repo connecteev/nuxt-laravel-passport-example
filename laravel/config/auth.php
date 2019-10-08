@@ -44,6 +44,9 @@ return [
         'api' => [
             'driver' => 'passport',
             'provider' => 'users',
+
+            // added by kunal
+            'hash'     => false,
         ],
     ],
 
