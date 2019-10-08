@@ -1,5 +1,5 @@
-
-Installation steps for https://github.com/jmschneider/nuxt-laravel-passport-example
+Installation steps for https://github.com/connecteev/nuxt-laravel-passport-example 
+(based on https://github.com/jmschneider/nuxt-laravel-passport-example)
 
 Note: Adopted from the two README files: 
 https://github.com/jmschneider/nuxt-laravel-passport-example/blob/master/laravel/README.md
