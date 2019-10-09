@@ -1,6 +1,7 @@
 require("dotenv").config();
 
 module.exports = {
+  mode: "universal",
   /*
    ** Headers of the page
    */
@@ -98,15 +99,15 @@ module.exports = {
     /*
      ** Run ESLint on save
      */
-    extend(config, { isDev, isClient }) {
-      if (isDev && isClient) {
-        config.module.rules.push({
-          enforce: "pre",
-          test: /\.(js|vue)$/,
-          loader: "eslint-loader",
-          exclude: /(node_modules)/
-        });
-      }
-    }
+    // extend(config, { isDev, isClient }) {
+    //   if (isDev && isClient) {
+    //     config.module.rules.push({
+    //       enforce: "pre",
+    //       test: /\.(js|vue)$/,
+    //       //loader: "eslint-loader",
+    //       exclude: /(node_modules)/
+    //     });
+    //   }
+    // }
   }
 };
