@@ -1,6 +1,11 @@
 <template>
   <section class="container">
     <div>
+      <strong>loggedIn?</strong>
+      <pre>{{ $auth.loggedIn }}</pre>
+    </div>
+
+    <div>
       <strong>Strategy</strong>
       <pre>{{ strategy }}</pre>
     </div>

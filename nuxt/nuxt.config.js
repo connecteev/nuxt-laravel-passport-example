@@ -33,6 +33,7 @@ module.exports = {
   modules: ["@nuxtjs/axios", "@nuxtjs/auth", "@nuxtjs/dotenv"],
 
   router: {
+    // Redirects protected (by default, all) routes to login page if not loggedin See https://auth.nuxtjs.org/guide/middleware.html
     middleware: ["auth"]
   },
 

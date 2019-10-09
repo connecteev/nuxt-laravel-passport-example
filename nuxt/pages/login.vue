@@ -1,6 +1,10 @@
 <template>
   <section class="container">
     <div>
+      <strong>loggedIn?</strong>
+      <pre>{{ $auth.loggedIn }}</pre>
+    </div>
+    <div>
       <form>
         <div>
           <label for="username">Username</label>
@@ -41,6 +45,11 @@ export default {
         password: ""
       }
     };
+  },
+  fetch(context) {
+    if (context.$auth.loggedIn) {
+      context.redirect(301, '/');
+    }
   },
   methods: {
     async passwordGrantLogin() {
