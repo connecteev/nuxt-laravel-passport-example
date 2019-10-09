@@ -1,8 +1,19 @@
 <template>
   <div>
+      NOTE: Make sure Laravel is listening on the port defined in .env: {{ laravel_endpoint }}
     <nuxt/>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      laravel_endpoint: process.env.LARAVEL_ENDPOINT,
+    };
+  },
+};
+</script>
 
 <style>
 html {

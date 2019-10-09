@@ -18,7 +18,7 @@ OneStepAtATime:laravel kunalpunjabi$ php artisan passport:client
  What should we name the client?:
  > KP_passport_client
  Where should we redirect the request after authorization? [http://laravel.test/auth/callback]:
- > http://localhost:8000/auth/callback
+ > http://localhost:8001/auth/callback
 New client created successfully.
 Client ID: 1
 Client secret: WW0ZPJa6gTE07P00mJw0v5ASOC78GRBFY5788xpp
@@ -34,7 +34,7 @@ Client Secret: EWZN9Os1W1kby2XirXzRhjizb9Kk5Nr5UdlWutYu
 
 5. Then populate nuxt/.env with: (copy output from commands above)
 
-LARAVEL_ENDPOINT=http://localhost:8000
+LARAVEL_ENDPOINT=http://localhost:8001
 PASSPORT_CLIENT_ID=1
 PASSPORT_CLIENT_SECRET=WW0ZPJa6gTE07P00mJw0v5ASOC78GRBFY5788xpp
 PASSPORT_PASSWORD_GRANT_ID=2

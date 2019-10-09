@@ -7,6 +7,7 @@ export default class PassportPasswordScheme {
   }
 
   _setToken(token) {
+    console.log('_setToken');
     if (this.options.globalToken) {
       // Set Authorization token for all axios requests
       this.$auth.ctx.app.$axios.setHeader(this.options.tokenName, token);
@@ -14,6 +15,7 @@ export default class PassportPasswordScheme {
   }
 
   _clearToken() {
+    console.log('_clearToken');
     if (this.options.globalToken) {
       // Clear Authorization token for all axios requests
       this.$auth.ctx.app.$axios.setHeader(this.options.tokenName, false);
@@ -21,6 +23,7 @@ export default class PassportPasswordScheme {
   }
 
   mounted() {
+    console.log('mounted');
     if (this.options.tokenRequired) {
       const token = this.$auth.syncToken(this.name);
       this._setToken(token);
@@ -30,7 +33,7 @@ export default class PassportPasswordScheme {
   }
 
   async login(args) {
-    console.log('meh');
+    console.log('login');
     if (!this.options.endpoints.login) {
       return;
     }
@@ -69,6 +72,7 @@ export default class PassportPasswordScheme {
   }
 
   async fetchUser(endpoint) {
+    console.log('fetchUser');
     // User endpoint is disabled.
     if (!this.options.endpoints.user) {
       this.$auth.setUser({});
@@ -90,6 +94,7 @@ export default class PassportPasswordScheme {
   }
 
   async logout(endpoint) {
+    console.log('logout');
     // Only connect to logout endpoint if it's configured
     if (this.options.endpoints.logout) {
       await this.$auth
@@ -102,6 +107,7 @@ export default class PassportPasswordScheme {
   }
 
   async _logoutLocally() {
+    console.log('logoutLocally');
     if (this.options.tokenRequired) {
       this._clearToken();
     }
