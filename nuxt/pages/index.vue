@@ -24,8 +24,7 @@ export default {
   },
   mounted() {
     console.log('mounted');
-    let tagsApiResponse = this.$axios.get('/api/v1/tags');
-    console.log('tagsApiResponse', tagsApiResponse);
+    this.loggedinUserGetTags();
   },
   methods: {
     logout() {
@@ -34,8 +33,27 @@ export default {
     },
     loggedinUserGetTags() {
       console.log('loggedinUserGetTags');
-      let tagsApiResponse = this.$axios.get('/api/v1/tags');
-      console.log('tagsApiResponse', tagsApiResponse);
+      // let tagsApiResponse = this.$axios.get('/api/v1/tags');
+
+      let tagsApiResponse = null;
+      this.$axios.get('/api/v1/tags', {
+          params: {
+            // ID: 12345
+          }
+        })
+        .then(function (response) {
+          console.log('then block, response:');
+          tagsApiResponse = response;
+          console.log('tagsApiResponse', tagsApiResponse);
+        })
+        .catch(function (error) {
+          console.log(error);
+        })
+        .finally(function () {
+          // always executed
+          console.log('finally block: always executed');
+        });
+
     }
   }
 };
