@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             // UsersTableSeeder::class,
             AdminUsersTableSeeder::class,
             // RoleUserTableSeeder::class,
+            PassportOauthClientsSeeder::class,
         ]);
 
         $this->call(TagsTableSeeder::class);
